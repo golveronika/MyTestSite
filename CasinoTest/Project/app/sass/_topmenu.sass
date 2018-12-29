@@ -1,0 +1,119 @@
+//@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css")
+$hoverscolor: #ec9c3f
+$hrefscolor: #e2e2e2
+
+
+#topmenu
+	//background-color: rgb(84, 84, 84)
+	nav
+		a
+			text-decoration: none
+			color: $hrefscolor
+			font-family: 'Roboto Condensed Light', arial
+			text-align: left
+			&:hover
+				color: $hoverscolor
+				text-shadow: #e75239 0 0 10px
+		a.topnav
+			font-size: 0.6em
+			padding: 0.5em 0.5em
+	.social
+		span
+			margin-top: 12px
+			padding: 1px
+			background: #656666
+			text-align: center
+			border: 2px solid #656666
+			border-radius: 5px
+			width: 20px
+			&:hover
+				text-decoration: none
+				color: $hoverscolor
+				text-shadow: #e75239 0 0 10px
+				background: #ffce81
+				box-shadow: 0 0 20px #f25822
+				border: 2px solid #ffce81
+		a
+			text-decoration: none
+			color: white
+			&:hover
+				text-decoration: none
+				color: $hoverscolor
+				text-shadow: #e75239 0 0 10px
+@media screen and (min-width: 744px)
+	#topmenu
+		display: grid
+		grid-template-columns: repeat(1, minmax(auto, 52.5em)) 9.5em 6em 5.3em
+		nav
+			white-space: nowrap
+			margin-top: 14px
+			#menu
+				display: none
+		.registration
+			text-align: center
+			margin-top: 14px
+			i
+				color: #81fbff
+				padding: 0
+				font-size: 0.6em
+				text-shadow: #81fbff 0 0 10px
+			span
+				font-family: 'Roboto Condensed Light', arial
+				color: $hoverscolor
+				text-shadow: #e75239 0 0 10px
+				padding: 0.5em 0.5em
+				font-size: 0.6em
+				cursor: default
+		#lang
+			ul > li > ul
+				display: none
+			ul > li
+				position: relative
+			ul > li > ul
+				position: absolute
+			ul
+				list-style-type: none
+				font-family: 'Roboto Condensed Light', arial
+				font-size: 0.9em
+				margin-top: 14px
+				//text-align: left
+				margin-right: 8px
+				&.menu > li > a
+					background-image: url("../img/1_topmenu/ru flag.png")
+					background-repeat: no-repeat
+					//background-size: 50px 50px
+					background-position: 0% 50%
+					padding-left: 28px
+					//display: block
+				&.submenu > li > a
+					background-image: url("../img/1_topmenu/us flag.png")
+					background-repeat: no-repeat
+					background-position: 0% 50%
+					padding-left: 28px
+
+			a
+				text-decoration: none
+				color: $hrefscolor
+				&:hover
+					color: $hoverscolor
+					text-shadow: #e75239 0 0 10px
+			& .submenu
+				//margin-left: 43px
+
+@media screen and (max-width: 917px) and (min-width: 744px)
+	#topmenu
+		display: grid
+		grid-template-columns: repeat(1, minmax(auto, 50em)) 6em 5.3em
+		.registration
+			display: none
+
+
+
+@media screen and (max-width: 744px)
+	#topmenu
+		//display: grid
+		//grid-template-columns: repeat(1, minmax(auto, 20em)) 10em 10em 10em
+	a.topnav
+		display: none
+	.registration, #lang, .social
+		display: none

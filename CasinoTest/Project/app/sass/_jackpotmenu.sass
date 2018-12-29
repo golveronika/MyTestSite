@@ -1,0 +1,190 @@
+#jackpotmenu
+  #lastwiners
+    //background-color: rgb(52, 52, 52)
+    display: grid
+    grid-template-rows: 40px 60px
+    white-space: nowrap
+  #jackpot
+    //background-color: rgb(222, 178, 175)
+    display: grid
+    grid-template-rows: 40px 60px
+  #medal
+    float: left
+    display: inline-block
+    white-space: nowrap
+    overflow: hidden
+    div
+      display: inline-block
+      white-space: nowrap
+    img
+      float: left
+      margin: -5px 5px
+    span
+      font-family: 'Ubuntu Bold', arial
+      font-weight: bolder
+      cursor: default
+      float: left
+      margin: 15px -10px
+    .gold
+      background: linear-gradient(#c88312, #feea87, #c88312)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    .silver
+      background: linear-gradient(#767171, #ffffff, #767171)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+    .bronze
+      background: linear-gradient(#9e5324, #eb9548, #feedca, #eb9548, #9e5324)
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+  #winslider
+    display: inline-block
+    //float: left
+    .pointer
+      text-decoration: none
+      font-size: 21px
+      color: #ffd0ca
+      text-shadow: #ff0000 0 0px 10px
+      vertical-align: 13px
+      &:hover
+        color: #ffffff
+        text-shadow: #ff0000 0 0 15px, 0px 0px 10px #ff8604, 0px 0px 5px #ff0000
+    .winners
+      display: inline-block
+      font-family: "Roboto Condensed", sans serif
+      font-size: 13px
+      white-space: nowrap
+      .picttext
+        float: left
+        margin-left: 9px
+        margin-right: 19px
+      %span-base
+        margin-top: 7px
+        cursor: default
+      .gamename
+        @extend%span-base
+        font-weight: bold
+        margin-right: 2px
+        color: white
+        font-size: 12px
+      .winvalue
+        @extend%span-base
+        font-weight: bolder
+        font-size: 13px
+        color: #f2de7b
+      .playername
+        @extend%span-base
+        font-size: 10px
+        color: white
+      .pictshow
+        float: left
+        margin-left: 5px
+        &:hover
+          box-shadow: inset 0px 0px 10px  #ffce81, 0px 0px 10px  #ffce81
+
+  .row1
+    //background-color: #520e28
+    font-family: "Roboto Condensed", sans serif
+    color: #ffce81
+    font-weight: bolder
+    text-shadow: #e75239 0 0 10px, #e75239 0 0 5px
+    cursor: default
+    display: flex
+    align-items: flex-end
+    span
+      margin-left: 20px
+      margin-bottom: 5px
+
+
+
+@media screen and (min-width: 950px)
+  #jackpotmenu
+    display: grid
+    grid-template-columns: minmax(54%,56%) minmax(auto,44%)
+    height: 100px
+
+
+@media screen and (max-width: 950px) and (min-width: 744px)
+  #jackpotmenu
+    display: grid
+    grid-template-columns: auto auto
+    height: 100px
+    #lastwiners
+      max-width: 500px
+      width: auto
+    #winslider .winners .picttext
+      margin-right: 0px
+    #medal
+      width: auto
+      //text-align: left
+      div
+        //text-align: left
+        //margin-left: 18px
+        //margin-right: 20px
+      div img
+        //padding-left: 10px
+        padding-right: 30px
+        height: 50px
+        width: auto
+      div span
+        position: absolute
+        margin: 40px -90px
+@media screen and (max-width: 744px) and (min-width: 656px)
+  #jackpotmenu
+    display: grid
+    grid-template-rows: 50% 50%
+    height: 200px
+    .row1
+      display: block
+      margin-left: auto
+      margin-right: auto
+      margin-top: 8px
+    #medal
+      text-align: center
+      div
+        margin-left: 20px
+        margin-right: 20px
+    #winslider
+      border-bottom: 1px solid rgb(237, 144, 36)
+      text-align: center
+      .winners .picttext
+        text-align: left
+        margin-right: auto
+        //margin-right: 25px
+        .gamename
+          //margin-right: 2px
+          font-size: 17px
+        .winvalue
+          font-size: 13px
+        .playername
+          font-size: 15px
+
+@media screen and (max-width: 656px)
+  #jackpotmenu
+    display: grid
+    grid-template-rows: 140px 150px
+    #jackpot
+      height: 150px
+      border-top: 0.5px solid rgb(237, 144, 36)
+    .row1
+      display: block
+      margin-left: auto
+      margin-right: auto
+      margin-top: 8px
+    #medal
+      text-align: center
+      div
+        margin-left: 10px
+        margin-right: 10px
+      div span
+        position: absolute
+        margin: 70px -70px
+    #winslider
+      text-align: center
+      margin: auto
+      .winners
+        .picttext
+          //float: left
+          text-align: left
+          margin-right: 20px
+          clear: left

@@ -1,0 +1,9 @@
+Перед вами psd. макет, по которому необходимо сверстать страницу. 
+Просьба использовать gulp, npm либо stylus. 
+Адаптив будет плюсом, остальное на ваше усмотрение.
+
+------------------------------------------------------------
+
+Before you psd. layout on which you need to lay out the page.
+Please use gulp, npm or stylus.
+Adaptive will be a plus, the rest is at your discretion.

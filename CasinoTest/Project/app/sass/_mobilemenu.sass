@@ -1,0 +1,89 @@
+$bgcolor: #0e0e0e
+$txtcolor: #fba540
+
+#mobilemenu
+  font-family: 'Roboto Condensed Light', arial
+  background-color: $bgcolor
+  height: 70px
+  display: grid
+  grid-template-rows: 1fr 1fr
+  a
+    text-decoration: none
+    color: $txtcolor
+    text-shadow: #e75239 0 0 10px
+    font-size: 40px
+  .downmenu
+    z-index: 300
+    background-color: $bgcolor
+    .menuregist
+      display: none
+    .menuregist > .regist
+      display: grid
+      text-align: center
+      grid-template-columns: 1fr 1fr
+      margin: 10px 0px
+      input
+        width: auto
+        font-size: 17px
+        margin:  0px 10px
+        border-radius: 0px
+        height: 25px
+      span > a
+        display: block
+        padding: 0px
+        font-style: italic
+        color: #e2e2e2
+        font-size: 15px
+        margin-left: 10px
+        text-decoration: none
+        margin-top: 3px
+      .menubuttons > span a
+        font-weight: bolder
+        border-radius: 3px
+        padding: 0px 5px
+        font-style: normal
+        margin:  0px 10px
+        text-decoration: none
+        border: 2px solid #81fbff
+        box-shadow: inset 0px 0px 10px  #81fbff, 0px 0px 10px  #81fbff
+        text-shadow: #39e7d2 0 0 10px
+        font-size: 17px
+        color: #81fbff
+        text-align: center
+  .upmenu
+    //box-shadow: 4px 0px 31px 13px #18dce2
+    border-bottom: 2px solid #86d9e5
+    text-align: right
+    position: relative
+    overflow: hidden
+    height: 68px
+  .gamburger
+    margin: 0 10px
+  a.patron
+    //padding: -15px -15px
+    //margin: -5px -5px
+  .user
+    margin: 0 5px
+    font-size: 35px
+  .logo
+    //align: left
+    left: -75px
+    top: -35%
+    height: 150px
+    position: absolute
+  .patron img
+      height: 35px
+      position: absolute
+      top: 13px
+      right: 110px
+  .menumain
+    display: none
+    margin: 0 0
+    padding: 0 0
+    & > li
+      list-style-type: none
+      border-bottom: 2px solid rgb(56, 158, 208)
+      box-shadow: 0 0 10px rgb(111, 233, 219)
+      a
+        font-size: 20px
+        margin-left: 10px

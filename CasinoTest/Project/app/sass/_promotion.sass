@@ -1,0 +1,44 @@
+.promrow1
+  height: 50px
+  background-color: white
+  font-family: 'Roboto Condensed'
+  margin: 0px 0px
+  padding: 0px 0px
+  color: #10154d
+  text-align: center
+  display: flex
+  align-items: center
+  white-space: nowrap
+  box-shadow: 0px 0px 10px  #d6f0ff, 0px 0px 10px  #10154d
+  span
+    text-align: center
+    padding: 150px
+    font-weight: bold
+.promslide
+  img
+    width: auto
+
+@media screen and (max-width: 1040px) and (min-width: 655px)
+  .promotion
+    width: 320px
+    .promslide
+      img
+        width: 320px
+
+@media screen and (max-width: 655px) and (min-width: 435px)
+  .promotion
+    width: 280px
+    .promslide
+      img
+        width: 280px
+
+@media screen and (max-width: 435px)
+  .promotion
+    width: 330px
+    .promrow1
+      width: 330px
+      span
+        margin-left: -30px
+    .promslide
+      img
+        width: 330px

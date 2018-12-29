@@ -1,0 +1,196 @@
+#gamearea
+  #more_games
+    //display: block
+    //display: flex
+    //align-items: center
+    //background-color: red
+    text-align: center
+    margin-top: 50px
+    height: 50px
+    margin-left: auto
+    margin-right: auto
+    .more_games_button
+      margin: 30px -138px
+      font-family: 'Roboto Condensed'
+      background-image: url(../img/5_game/moregames.png)
+      font-weight: bolder
+      border-radius: 3px
+      box-shadow: inset 0px 0px 10px  #81fbff, 0px 0px 10px  #81fbff
+      font-size: 13px
+      text-align: center
+      color: #81fbff
+      padding: 3px 16px
+      text-decoration: none
+      border: 2px solid #81fbff
+      //margin-left: 420px
+      &:hover
+        font-weight: bolder
+        border-radius: 3px
+        box-shadow: inset 0px 0px 20px  #519ff8, inset 0px 0px 10px  #4993f4, 0px 0px 15px  #81fbff
+        font-size: 13px
+        text-align: center
+        color: #81fbff
+        padding: 3px 16px
+        text-decoration: none
+        border: 2px solid #81fbff
+  #searchgame
+    display: grid
+    grid-template-columns: auto 220px
+    //background-color: black
+    height: 42px
+    .sort
+      display: flex
+      align-items: center
+      white-space: nowrap
+      font-family: 'Roboto Condensed'
+      color: white
+      font-size: 14px
+      cursor: default
+      & > a
+        text-decoration: none
+        font-weight: bold
+        color: white
+        padding: 10px
+    .search
+      display: flex
+      align-items: center
+      white-space: nowrap
+      font-family: 'Roboto Condensed'
+      color: white
+      font-size: 14px
+      cursor: default
+      position: relative
+      text-align: right
+      float: right
+      input
+        width: 220px
+        height: 25px
+        padding-left: 5px
+        border: 3px solid #88fbff
+        box-shadow: inset 0px 0px 0px  #88fbff, 0px 0px 10px  #88fbff
+        text-align: left
+        background-color: black
+        font-family: 'Roboto Condensed'
+        color: white
+      button
+        position: absolute
+        top: 0
+        right: 0px
+        width: 38px
+        height: 38px
+        border: none
+        background: transparent
+        cursor: pointer
+        &:before
+          content: "\f002"
+          font-family: FontAwesome
+          font-size: 16px
+          text-shadow: #e75239 0 0 10px, #e75239 0 0 5px
+          color: #ffce81
+  #categogies
+    height: 45px
+    //background-color: rgb(53, 102, 128)
+    white-space: nowrap
+    & > div > a
+      font-family: 'Roboto Condensed'
+      font-style: normal
+      font-weight: 300
+      text-decoration: none
+      color: #ffce81
+      text-shadow: #e75239 0 0 10px, #e75239 0 0 5px
+    .categoriebtn
+      //text-align: center
+      border: 2px solid #ffce81
+      box-shadow: inset 0px 0px 10px  #f8a617, 0px 0px 10px  #ffce81
+      height: 30px
+      margin-top: 12px
+      &:hover
+        background-image: url(../img/5_game/hoverRectangle.png)
+      a span
+        position: absolute
+        margin-top: 5px
+@media screen and (min-width: 950px)
+  #gamearea
+    #categogies
+      display: grid
+      //grid-template-columns: auto 15px auto 15px auto 15px  auto 15px auto
+      grid-template-columns: minmax(auto,178px) 25px minmax(auto,178px) 25px minmax(auto,178px) 25px  minmax(auto,178px) 25px minmax(auto,178px)
+      height: 45px
+      //background-color: rgb(53, 102, 128)
+      white-space: nowrap
+@media screen and (max-width: 950px) and (min-width: 744px)
+  #gamearea
+    #categogies
+      display: grid
+      //grid-template-columns: auto 15px auto 15px auto 15px  auto 15px auto
+      grid-template-columns: minmax(auto,178px) auto minmax(auto,178px) auto minmax(auto,178px) auto  minmax(auto,178px) auto minmax(auto,178px)
+      height: 45px
+      //background-color: rgb(53, 102, 128)
+      white-space: nowrap
+
+@media screen and (max-width: 744px) and (min-width: 656px)
+  #gamearea
+    #categogies
+      display: grid
+      //grid-template-columns: auto 15px auto 15px auto 15px  auto 15px auto
+      grid-template-columns: minmax(auto,178px) auto minmax(auto,178px) auto minmax(auto,178px) auto  minmax(auto,178px) auto minmax(auto,178px)
+      height: auto
+      //background-color: rgb(53, 102, 128)
+      white-space: nowrap
+
+@media screen and (max-width: 656px)
+  #gamearea
+    #searchgame
+      display: grid
+      grid-template-columns: auto auto
+      //background-color: black
+      .sort
+        font-size: 12px
+        & > a
+          text-decoration: none
+          font-weight: bold
+          color: white
+          padding: 10px
+      .search
+        display: flex
+        align-items: center
+        white-space: nowrap
+        color: white
+        font-size: 14px
+        cursor: default
+        position: relative
+        text-align: right
+        float: right
+        input
+          float: right
+          width: 150px
+          height: 25px
+          padding-left: 5px
+          right: 0px
+          position: absolute
+        button
+          position: absolute
+          top: 0
+          right: 0px
+    #categogies
+      display: grid
+      //grid-template-columns: auto 15px auto 15px auto 15px  auto 15px auto
+      grid-template-columns: minmax(auto,178px) auto minmax(auto,178px) auto minmax(auto,178px) auto  minmax(auto,178px) auto minmax(auto,178px)
+      //grid-template-rows: minmax(auto,78px) auto minmax(auto,78px) auto minmax(auto,78px) auto  minmax(auto,78px) auto minmax(auto,78px)
+      height: auto
+      //background-color: rgb(53, 102, 128)
+      white-space: nowrap
+      .categoriebtn
+        font-size: 10px
+        margin-top: 0px
+        height: 40px
+      a
+        span
+          display: block
+          margin: 0px 10px
+          position: absolute
+          padding: 20px 0px
+        img
+          display: block
+          margin: -5px 15px
+          position: absolute

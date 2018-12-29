@@ -1,0 +1,195 @@
+#gamearea
+  #root
+    .item
+      img
+        z-index: 2
+        position: absolute
+      &:hover img
+        opacity: 0.5
+        filter: alpha(opacity=50)
+        z-index: 0
+        box-shadow: inset 0px 0px 20px  #00d9ff, inset 0px 0px 10px  #00d9ff, 0px 0px 15px  #00d9ff
+    .gamename_bottom
+      font-size: 13px
+      //text-shadow: #e75239 0 0 10px, #e75239 0 0 5px
+      font-family: 'Roboto Condensed'
+      color: white
+      position: absolute
+      margin: 125px 3px
+      //font-weight: bold
+    .hrefy_2
+      font-family: 'Roboto Condensed'
+      z-index: 1
+      a
+        position: absolute
+      .play_now
+        margin: 75px 30px
+        background-image: url(../img/5_game/PLAY_NOW.png)
+        font-weight: bolder
+        order-radius: 3px
+        box-shadow: inset 0px 0px 10px  #81fbff, 0px 0px 10px  #81fbff
+        font-size: 13px
+        text-align: center
+        color: #81fbff
+        padding: 3px 16px
+        text-decoration: none
+        border: 2px solid #81fbff
+        &:hover
+          font-weight: bolder
+          border-radius: 3px
+          box-shadow: inset 0px 0px 20px  #519ff8, inset 0px 0px 10px  #4993f4, 0px 0px 15px  #81fbff
+          font-size: 13px
+          text-align: center
+          color: #81fbff
+          padding: 3px 16px
+          text-decoration: none
+          border: 2px solid #81fbff
+      .demo
+        margin: 35px 45px
+        background-image: url(../img/5_game/DEMO.png)
+        font-weight: bolder
+        border-radius: 3px
+        box-shadow: inset 0px 0px 10px  #ffce81, 0px 0px 10px  #ffce81
+        font-size: 13px
+        text-align: center
+        color: #f9b46b
+        padding: 3px 16px
+        text-decoration: none
+        border: 2px solid #ffce81
+        &:hover
+          font-weight: bolder
+          border-radius: 3px
+          box-shadow: inset 0px 0px 20px  #f16323, inset 0px 0px 10px  #ffce81, 0px 0px 15px  #ffce81
+          font-size: 13px
+          text-align: center
+          color: #f9b46b
+          padding: 3px 16px
+          text-decoration: none
+          border: 2px solid #ffce81
+
+
+
+@media screen and (min-width: 950px)
+  #gamearea
+    #root
+      .items
+        display: grid
+        grid-gap: 22px
+        grid-template-columns: repeat(auto-fit, 180px)
+        .item
+          //background-color: blue
+          height: 135px
+        .promotion
+          //background-color: gray
+          grid-column-start: 4
+          grid-column-end: 6
+          grid-row-start: 1
+          grid-row-end: 3
+@media screen and (max-width: 950px) and (min-width: 744px)
+  #gamearea
+    #root
+      .items
+        display: grid
+        grid-gap: 22px
+        grid-template-columns: repeat(auto-fit, 155px)
+        .item
+          //background-color: red
+          height: 125px
+          img
+            width: 155px
+            height: auto
+        .hrefy_2
+          .play_now
+            margin: 60px 25px
+          .demo
+            margin: 20px 40px
+        .gamename_bottom
+          margin: 110px 3px
+        .promotion
+          //background-color: gray
+          grid-column-start: 3
+          grid-column-end: 5
+          grid-row-start: 1
+          grid-row-end: 3
+@media screen and (max-width: 744px) and (min-width: 656px)
+  #gamearea
+    #root
+      .items
+        display: grid
+        grid-gap: 22px
+        grid-template-columns: repeat(auto-fit, 155px)
+        .item
+          //background-color: green
+          height: 125px
+          img
+            width: 155px
+            height: auto
+        .hrefy_2
+          .play_now
+            margin: 60px 25px
+          .demo
+            margin: 20px 40px
+        .gamename_bottom
+          margin: 110px 3px
+        .promotion
+          //background-color: gray
+          grid-column-start: 2
+          grid-column-end: 4
+          grid-row-start: 1
+          grid-row-end: 3
+@media screen and (max-width: 656px) and (min-width: 435px)
+  #gamearea
+    #root
+      .items
+        display: grid
+        grid-gap: 22px
+        grid-template-columns: repeat(auto-fit, 125px)
+        .item
+          //background-color: black
+          height: 90px
+          img
+            width: 125px
+            height: auto
+        .hrefy_2
+          .play_now
+            margin: 50px 12px
+          .demo
+            margin: 10px 27px
+        .gamename_bottom
+          margin: 90px 3px
+        .promotion
+          //background-color: gray
+          grid-column-start: 1
+          grid-column-end: 3
+          grid-row-start: 1
+          grid-row-end: 3
+
+@media screen and (max-width: 435px)
+  #gamearea
+    #root
+      .items
+        display: grid
+        grid-gap: 22px
+        grid-template-columns: repeat(auto-fit, 100px)
+        .item
+          //background-color: black
+          height: 90px
+          img
+            width: 115px
+            height: auto
+        .hrefy_2
+          .play_now
+            margin: 45px 5px
+          .demo
+            margin: 5px 20px
+        .gamename_bottom
+          font-size: 10px
+          margin: 80px 3px
+        .promotion
+          height: 240px
+          margin-left: 15px
+          //background-color: gray
+          grid-column-start: 1
+          grid-column-end: 4
+          grid-row-start: 1
+          grid-row-end: 4

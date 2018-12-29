@@ -1,0 +1,40 @@
+footer
+  padding: 0
+  margin: 0
+  display: grid
+  grid-template-rows: auto auto auto
+  text-align: center
+  //white-space: nowrap
+  .about
+    text-decoration: none
+    font-family: 'Roboto Condensed'
+    color: white
+    margin: 20px 0px
+    a
+      text-decoration: none
+      color: #adadad
+      padding: 0px  5px
+      &:hover
+        color: #c6b429
+  .payment
+    //display: block
+    margin: 0px 0px
+    padding: 15px 0px
+    border: 2px solid transparent
+    border-image: -webkit-gradient(linear, left top, right top, color-stop(10em, black), color-stop(30em, #00aaff), color-stop(48em, black))
+    border-image: linear-gradient(to right, black 10em, #00aaff 30em, black 48em)
+    border-image-slice: 1
+    a
+      margin: 10px
+      img
+        filter: grayscale(100%)
+        filter: gray
+        &:hover
+          filter: none
+  .license
+    margin: 10px
+    span
+      text-decoration: none
+      font-family: 'Roboto Condensed'
+      color: #adadad
+      margin: 10px

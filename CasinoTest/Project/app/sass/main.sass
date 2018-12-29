@@ -1,0 +1,37 @@
+@import "topmenu"
+@import "topmenulogo"
+@import "mobilemenu"
+@import "slider"
+@import "jackpotmenu"
+@import "gamearea"
+@import "gameareaitem"
+@import "footer"
+@import "promotion"
+
+*
+	padding: 0
+	margin: 0
+
+.content
+	display: grid
+	background-color: rgb(169, 190, 158)
+
+
+
+
+@media screen and (min-width: 1505px)
+  .content
+    grid-template-columns: 1fr repeat(1, minmax(auto, 62em)) 1fr
+
+@media screen and (min-width: 1400px) and (max-width: 1505px)
+	.content
+		grid-template-columns: 17% minmax(auto, 66%) 17%
+		//grid-template-columns: 17em minmax(auto, 66em) 17em
+
+@media screen and (max-width: 1400px) and (min-width: 480px)
+	.content
+		grid-template-columns: 1fr repeat(1, minmax(auto, 60em)) 1fr
+
+@media screen and (max-width: 480px)
+	.content
+		grid-template-columns: 0% minmax(auto, 100%) 0%

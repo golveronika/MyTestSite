@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Для iphone safary -->
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <title>CASINO</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/Game-spades.ico">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="http://allfont.ru/allfont.css?fonts=roboto-condensed-light" rel="stylesheet" type="text/css" />
+  <link href="http://allfont.ru/allfont.css?fonts=ubuntu-bold" rel="stylesheet" type="text/css" />
+  <!-- Librays -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+</head>
+<body>
+
+
+
+<!-- mobilemenu -->
+  <div id="mobilemenu">
+    <div class="upmenu">
+      <a href="index.html"><img class="logo" src="img/2_topmenu_logo/logo.png"></a>
+			<a class="patron" href="#"><img alt="ru" src="img/1_topmenu/ru flag.png"></a>
+			<a class="user" href="#"><i class="far fa-user"></i></a>
+  <!--    <a class="gamburger" href="#">&#9776</a>-->
+			<a class="gamburger" href="#">☰</a>
+
+		</div>
+		<div class="downmenu">
+			<ul class="menumain">
+				<li><a href="#">ВСЕ ИГРЫ</a></li>
+				<li><a href="#">ПОПОЛНЕНИЕ СЧЕТА</a></li>
+				<li><a href="#">ПОЛУЧИТЬ ВЫИГРЫШ</a></li>
+        <li><a href="#">БОНУСЫ</a></li>
+				<li><a href="#">МОБИЛЬНАЯ ВЕРСИЯ</a></li>
+				<li><a href="#">КОНТАКТЫ</a></li>
+			</ul>
+			<div class="menuregist">
+			<div class="regist">
+				<div>
+				<input type="text" id="username" placeholder="Username">
+				<input type="password" id="password" placeholder="Password">
+				<span><a id="logbutton" href="#">Forgot your password?</a></span>
+				</div>
+				<div class="menubuttons">
+					<span><a id="buttonlog" href="#">LOGIN</a></span>
+					<span><a id="buttonreg" href="#">REGISTRATION</a></span>
+				</div>
+			</div>
+  			</div>
+		</div>
+  </div><!-- /mobilemenu -->
+
+<!-- topmenu -->
+<div id="topmenu">
+  <div>
+    <nav>
+  <a class="topnav" href="#">ВСЕ ИГРЫ</a>
+  <a class="topnav" href="#">ПОПОЛНЕНИЕ СЧЕТА</a>
+  <a class="topnav" href="#">ПОЛУЧИТЬ ВЫИГРЫШ</a>
+  <a class="topnav" href="#">БОНУСЫ</a>
+  <a class="topnav" href="#">МОБИЛЬНАЯ ВЕРСИЯ</a>
+  <a class="topnav" href="#">КОНТАКТЫ</a>
+<!--  <a href="#" id="menu" class="icon">&#9776</a> -->
+    </nav>
+</div>
+<div class = "registration">
+  <i class="fa fa-bolt" aria-hidden="true"></i><span>БЫСТРАЯ РЕГИСТРАЦИЯ</span>
+</div>
+<div class="social">
+  <a href="#"><span  class="fa fa-facebook" aria-hidden="true"></span></a>
+  <a href="#"><span  class="fa fa-twitter" aria-hidden="true"></span></a>
+  <a href="#"><span  class="fa fa-vk" aria-hidden="true"></span></a>
+</div>
+<div id="lang">
+  <ul class="menu">
+    <li><a href="#">Русский</a>
+        <ul class="submenu">
+          <li><a href="#">English</a></li>
+        </ul>
+    </li>
+  </ul>
+</div>
+
+</div><!-- /topmenu -->
+
+<!-- topmenulogo -->
+<div id="topmenulogo">
+  <div></div>
+  <div class="regist">
+    <div><a id="buttonreg" href="#">REGISTRATION</a></div>
+    <div><input type="text" id="username" placeholder="Username"></div>
+    <div><input type="password" id="password" placeholder="Password">
+    <span><a id="logbutton" href="#">Forgot your password?</a></span></div>
+    <div><a id="buttonlog" href="#">LOGIN</a></div>
+  </div>
+</div><!-- /topmenulogo -->
+
+
+<!-- slider-->
+<div id="slider">
+   <div id="viewport">
+      <ul id="slidewrapper">
+          <li class="slide"><img src="img/3_slider/SLIDER.png" alt="1" class="slide-img"></li>
+          <li class="slide"><img src="img/3_slider/SLIDER.png" alt="2" class="slide-img"></li>
+          <li class="slide"><img src="img/3_slider/SLIDER.png" alt="3" class="slide-img"></li>
+      </ul>
+  </div>
+  <div id="prev-next-btns">
+      <div id="prev-btn"><</div>
+      <div id="next-btn">></div>
+  </div>
+  <ul id="nav-btns">
+      <li class="slide-nav-btn"></li>
+      <li class="slide-nav-btn"></li>
+      <li class="slide-nav-btn"></li>
+  </ul>
+
+</div><!-- slider-->
+
+<div id="jackpotmenu"><!-- jackpotmenu-->
+  <div id="lastwiners">
+    <div class="row1"><span>LAST WINNERS</span></div>
+    <div id="winslider">
+      <a href="#" class="pointer" @click="prevSlide"><i class="fas fa-chevron-left"></i></a>
+        <div class="winners" v-for="(win, i) in winner.slice(countview-3,countview)">
+          <div class="pictshow"><a href="#"><img :src="win.icon"></a></div>
+          <div class="picttext">
+          <span class="gamename">{{win.game}}</span> <br>
+          <span class="winvalue">{{win.winvalue}}</span> <br>
+          <span class="playername">{{win.playername}}</span>
+        </div>
+        </div>
+      <a href="#" name="pointer" class="pointer" @click="nextSlide"><i class="fas fa-chevron-right"></i></a>
+    </div>
+  </div>
+  <div id="jackpot">
+    <div class="row1"><span>JACKPOT</span></div>
+    <div id="medal">
+        <div>
+        <img src="img/4_bottom_menu/gold.png">
+        <span class="gold">{{grandgold}}</span>
+        </div><div>
+        <img src="img/4_bottom_menu/silver.png">
+        <span class="silver">{{grandsilver}}</span>
+        </div><div>
+        <img src="img/4_bottom_menu/bronze.png">
+        <span class="bronze">{{grandbronze}}</span>
+        </div>
+    </div>
+    </div>
+  </div>
+
+</div><!-- jackpotmenu-->
+
+
+<div id="gamearea"><!-- gamearea-->
+  <div id="categogies">
+    <div class="categoriebtn"><a href="#"><img src="img/5_game/POPULAR.png"><span>POPULAR</span></a></div>
+    <div></div>
+    <div class="categoriebtn"><a href="#"><img src="img/5_game/NEW.png"><span>NEW</span></a></div>
+    <div></div>
+    <div class="categoriebtn"><a href="#"><img src="img/5_game/SLOT.png"><span>SLOT GAMES</span></a></div>
+    <div></div>
+    <div class="categoriebtn"><a href="#"><img src="img/5_game/CARDS.png"><span>CARD GAMES</span></a></div>
+    <div></div>
+    <div class="categoriebtn"><a href="#"><img src="img/5_game/ROULETTE.png"><span>ROULETTE</span></a></div>
+  </div>
+
+  <div id="searchgame">
+    <div class="sort">
+      <span>SORT BY:</span>
+      <a href="#">POPULARITY</a>|<a href="#">A-Z</a>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Search for game ...">
+      <button type="submit"></button>
+    </div>
+  </div>
+
+  <div id="root">
+    <game-item></game-item>
+  </div>
+
+  <div id="more_games">
+    <a href="#" class="more_games_button">MORE GAMES</a>
+  </div>
+
+</div><!-- gamearea-->
+
+<footer class="footer">
+    <div class="about">
+      <a href="#">ABOUT CASINO</a> |
+      <a href="#">TERMS AND CONDITIONS</a> |
+      <a href="#">RESPONSIBLE GAMING</a> |
+      <a href="#">CONTACT US</a>
+    </div>
+    <div class="payment">
+      <a href="#"><img src="img/6_footer/MASTERCARD.png"></a>
+      <a href="#"><img src="img/6_footer/YANDEX.png"></a>
+      <a href="#"><img src="img/6_footer/VISA.png"></a>
+      <a href="#"><img src="img/6_footer/LIQPAY.png"></a>
+      <a href="#"><img src="img/6_footer/QIWI.png"></a>
+    </div>
+    <div class="license">
+      <span>@ 2015. ALL RIGHTS RESERVED.</span>
+    </div>
+</footer>
+
+
+<script type="text/javascript">
+//Для экономии места в html и для практики jQuery
+  $("body > div").wrap("<div class='content'></div>");
+  $("body > footer").wrap("<div class='content'></div>");
+  $("<div></div>").appendTo(".content");
+  $("<div></div>").prependTo(".content");
+  $(".content:has(#topmenu)")
+    .css("height","50px")
+    .css("background-color","#111111");
+  $(".content:has(#topmenulogo)")
+    .css("height","77px")
+    .css("background-color","rgb(0, 0, 0)")
+    .css("border-top","1px solid #4a99ba")
+    .css("border-bottom","1px solid #00aaff");
+  $(".content:has(#slider)")
+    .css("height","295px")
+    .css("background-color","#7d9494");
+  $(".content:has(#jackpotmenu)")
+    .css("height","auto")
+    .css("background-color","black")
+    .css("border-top","1px solid #00aaff")
+    .css("border-bottom","1px solid #00aaff");
+  $(".content:has(#gamearea)")
+    .css("height","auto")
+    .css("background-image","url('img/5_game/bg.png')")
+    .css("background-clip","border-box");
+  $(".content:has(footer)")
+    .css("border-top","1px solid #00aaff")
+    .css("background-color","black");
+
+
+</script>
+
+<script type="text/javascript" src="js/topmenu.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/jackpotmenu.js"></script>
+<script type="text/javascript" src="js/gamearea.js"></script>
+<script type="text/javascript" src="js/promslider.js"></script>
+
+</body>
+</html>
