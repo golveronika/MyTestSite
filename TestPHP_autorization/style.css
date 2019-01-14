@@ -1,0 +1,90 @@
+.form-signin {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+input {
+    margin-bottom: 15px;
+}
+
+table {
+    margin: 60px 0px;
+}
+
+.thead {
+    background-color: aliceblue;
+}
+
+.card-body {
+    max-width: 300px;
+}
+
+.collapse input {
+    margin-top: 10px;
+}
+
+span.invalid {
+    color: red;
+    //display: none;
+}
+
+#snackbar {
+    opacity: 0;
+    //visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    //background-color: lightcoral;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar_log{
+
+    min-width: 250px;
+    margin-left: -125px;
+    color: #fff;
+    background-color: lightgreen;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.err {
+    background-color: lightcoral;
+}
+
+#snackbar.mes {
+    background-color: lightgreen;
+}
+
+#snackbar.show {
+    visibility: visible;
+    animation: fadein 1s, fadeout 2s 1s;
+    bottom: 30px;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0.8;}
+    to { opacity: 1;}
+}
+
+
+
+@keyframes fadeout {
+    from { opacity: 1;}
+    to { opacity: 0.5;}
+}
