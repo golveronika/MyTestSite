@@ -16,7 +16,7 @@
 
 	<header>
 		<i class="fas fa-code"></i><span class="left_caption">Simple tables</span>
-		<a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+		<a href="https://github.com/golveronika/MyTestSite/tree/master/Simple_Tables" title="GitHub"><i class="fab fa-github"></i></a>
 		<a href="#" title="Recover database" onclick="RecoverDB()"><i class="fas fa-undo"></i></a>
 		<span class="right_caption">READ ME -> </span><a href="#" title="Description" onclick="ShowDescription()"><i class="fas fa-file-code"></i></a>
 	</header>
