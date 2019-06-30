@@ -5,8 +5,6 @@ $(function() {
 
 });
 
-
-
 function ShowSimpleTable() {
 
 	var params_1 = 

@@ -16,7 +16,6 @@ $(function() {
 });
 
 
-
 $(document).click( function(event)	{
  	event.stopPropagation();
 	if ($(event.target).closest(".TB_modal").length == 0) {

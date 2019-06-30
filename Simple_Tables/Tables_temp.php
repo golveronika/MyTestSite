@@ -46,7 +46,6 @@ function RecoverData() {
 	$query =  $GLOBALS['connection']->query($query_text);
 	return "recovered";
 
-
 }
 
 function AddReview($username, $Comment, $id_restaurant, $rate) {
