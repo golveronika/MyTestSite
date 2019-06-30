@@ -139,8 +139,8 @@ function RenderDescription(lang) {
 	html += "<span><b>Fontawesome: </b> <a href='https://use.fontawesome.com/releases/v5.7.2/css/all.css'>https://use.fontawesome.com/releases/v5.7.2/css/all.css</a></span>";
 
 	html += "<pre>"+lan_content[lang].text_2+"</pre>";
-	html += "<span><b>Tables.js: </b> <a href='https://github.com/golveronika/MyTestSite/blob/master/Simple_Tables/Tables.js'</a></span><br>";
-	html += "<span><b>Tables.css: </b> <a href='https://github.com/golveronika/MyTestSite/blob/master/Simple_Tables/Tables.css'>https://use.fontawesome.com/releases/v5.7.2/css/all.css</a></span>";
+	html += "<span><b>Tables.js:</b> <a href='https://github.com/golveronika/MyTestSite/blob/master/Simple_Tables/Tables.js'>https://github.com/golveronika/MyTestSite/blob/master/Simple_Tables/Tables.js</a></span><br>";
+	html += "<span><b>Tables.css:</b> <a href='https://github.com/golveronika/MyTestSite/blob/master/Simple_Tables/Tables.css'>https://github.com/golveronika/MyTestSite/blob/master/Simple_Tables/Tables.css</a></span>";
 
 	html += "<pre class='red_pre'>"+lan_content[lang].text_3+"</pre>";
 
@@ -318,7 +318,7 @@ function RenderDescription(lang) {
 	$(".container_documentation").append(html);
 
 	html = "<pre class='red_pre'>"+lan_content[lang].text_5+"</pre>";
-	html += "<pre>"+lan_content[lang].text_6+"<a href='https://github.com/golveronika/MyTestSite/tree/master/Simple_Tables'>https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js</a></pre>";
+	html += "<pre>"+lan_content[lang].text_6+"<a href='https://github.com/golveronika/MyTestSite/tree/master/Simple_Tables'>https://github.com/golveronika/MyTestSite/tree/master/Simple_Tables</a></pre>";
 	html += "<pre>(Tables.js, Main.js, Tables_temp.php) </pre><br>";
 
 	$(".container_documentation").append(html);
