@@ -1,0 +1,257 @@
+
+
+.top_content_table {
+    top: 0;
+    left: 0;
+    grid-area: topleft;
+    background-color: #33af6b;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0px;
+    height: 35px;
+    z-index: 100;
+    border-bottom: 1px solid white;
+    padding: 0px  5px  0px;
+}
+
+table .thead th{
+    z-index: 6;    
+    position: sticky;
+    position: -webkit-sticky;  
+    padding: 6px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    background-color: #33af6b;
+}
+
+.sticky_th_panel {
+    top: 36px;
+}
+
+.sticky_th {
+    top: 0px;
+}
+
+.check_hide input {
+    width: 40px;
+    display: inline-block;
+    margin: 5px;
+}
+
+.top_content_table button {
+    margin: 5px 2px 0px;
+    height: 25px;
+    padding: 0px 10px 0px;
+}
+
+.content_add {
+    margin-bottom: 10px;
+    max-height: 20em;
+    overflow-y: scroll;
+    
+}
+
+.srch_input {
+    float: right;
+    margin-top: 5px;
+    padding: 3px;
+    
+}
+
+.caption_add {
+    display: block;
+    background-color: #eaeaea;
+    top: 0px;
+    padding: 10px;
+    text-align: left;
+    
+}
+
+.caption_bottom_add button {
+    margin-right: 30px;
+    padding: 5px;
+    width: 100px;
+}
+
+.caption_bottom_add{
+    text-align: right;
+    bottom: 0px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    background-color: #eaeaea;
+}
+
+@media (max-width: 830px) {
+   .TB_modal {
+    left: 2px;
+    }
+}
+
+
+
+@media (min-width: 830px) {
+    
+   .TB_modal {
+    left: 30%;
+    }
+    
+  .TB_modal label {
+      margin-left: 100px;
+    }  
+    
+    .TB_modal input[type=text] {
+        margin-right: 100px;
+    }
+    
+    .TB_modal select {
+       margin-right: 100px;  
+    }
+}
+
+.TB_modal .text_modal {
+    margin: 20px 50px 20px;
+    display: block;
+}
+
+.TB_modal label {
+    min-width: 200px;
+    display: inline-block;
+    margin-right: 100px;
+}
+
+
+.TB_modal select {
+    width: 155px;
+    margin-top: 10px;
+    padding: 5px 4px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.TB_modal input[type=text] {
+    margin-top: 10px;
+    padding: 5px 4px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+@media (max-height: 700px) {
+    .TB_modal {
+        top: 2px;
+    }
+}
+
+@media (min-height: 700px) {
+    .TB_modal {
+        top: 30%;
+    }
+}
+
+.TB_modal {
+    margin: 0; 
+    padding: 0; 
+    position: fixed; 
+    background-color: #fcfcfc;
+    z-index: 200;
+    overflow: hidden;
+    border-radius: 6px; 
+    border: 1px solid #6b6b6b;
+    font-family: Segoe UI, Arial, sans-serif;
+}
+
+.primary{
+    color:#e23939;
+    width: 70px;
+}
+
+.sorted_up::after {
+    content: " ↑";
+}
+
+.sorted_down::after {
+    content: " ↓";
+}
+
+
+table td i.fa-trash-alt {
+    margin-right: 8px;
+}
+
+table {
+    position: relative;
+    width: 100%;
+}
+
+table td i {
+    color:#868686;
+    font-size: 14px;
+}
+
+table td a {
+    text-decoration: none;
+}
+
+input.text_edit {
+    font-size: 11px;
+    padding: 2px;
+}
+
+.active_row{
+    background-color: #daeca8;
+}
+
+table {
+    font-family: Segoe UI, Arial, sans-serif;
+    font-size: 12px;
+    border-spacing: 0;
+    border: 1px solid #9e9696;
+    cursor:default;
+    
+}
+
+table .thead {
+    color: #ffffff;
+}
+
+
+table .tbody:hover {
+    color:#3a3232;
+    background-color: #fbe17e;
+
+}
+
+table .tbody td{
+    padding: 5px;
+    border-left: 1px solid #b1b1b1;
+    border-top: 1px solid #b1b1b1;
+    white-space: nowrap;
+    max-width: 300px;
+    overflow: hidden;
+}
+table {
+    background-color: white;
+}
+table td, table th {
+    white-space: nowrap;
+}
+table tr:first-child th {
+    border-top: 0;
+    
+}
+
+table tr:last-child td {
+    border-bottom: 0;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+    border-left: 0;
+    width: 10px;
+    text-align: center;
+}
+
+table tr td:last-child,
+table tr th:last-child {
+    border-right: 0;
+}
